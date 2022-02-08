@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Return Maximizer</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Add Jumbotron to Header -->
+        <div class="jumbotron text-center" style="background-image: url(https://learnmarketonline.com/wp-content/uploads/2018/04/largest-forex-brokers.jpg); background-size: 100%;">
+          <h1 style ="color:aliceblue"> Stock Return Maximizer</h1>
+          <!-- Add a button to activate scraping script -->
+          <form action="{{ url_for('analyzer')}}" method="post">
+            <p style=color:white> <label for="ticker" color="white">Stock Ticker:</label></p>
+            <input type="text" id="tick" name="inputticker" placeholder="ticker">
+          <button type='submit' href="/analyze">Analyze</button>
+        </div>
+    <h3>Stock Ticker: {{tk}} </h3>
+    <h3>Predicted Price of the stock: US$ {{pp}} </h3>
+    <h3>Current Price of the stock: US$ {{cp}} </h3>
+    <h3>Recommendation: {{rec}} </h3>
+
+    <p>Business Summary: {{bs}} </p>
+
+</body>
+</html>
