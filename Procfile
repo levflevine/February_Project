@@ -1,0 +1,1 @@
+web: gunicorn February_Project.app:app
